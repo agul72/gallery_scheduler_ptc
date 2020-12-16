@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "jwtSecret": "My super-puper secret key",
+  "mongoUrl": "mongodb+srv://agul:12345.com@cluster0.fupxr.mongodb.net/propet?retryWrites=true&w=majority"
+}
