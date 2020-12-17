@@ -15,12 +15,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/api/user', require('./routes/user.routes'));
 app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/gallery', require('./routes/gallery.routes'));
-app.use('/', require('./routes/home.routes'));
+// app.use('/', require('./routes/home.routes'));
 
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'client', 'build')));
 
-    app.get('*', (req, res) => {
+    app.get('/', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     })
 }
